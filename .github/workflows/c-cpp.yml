@@ -18,10 +18,18 @@ jobs:
 
   test:
   
-      runs-on: ubuntu-letest
-      needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: configure
+      run: gcc -o appl *.c
+
+  
+#      runs-on: ubuntu-letest
+#      needs: build
       
-      steps:
-      - uses: actions/checkout@v4
-      - name: configure
-        run: echo "Hello WOrld!"
+ #     steps:
+ #     - uses: actions/checkout@v4
+ #     - name: configure
+ #       run: echo "Hello WOrld!"
