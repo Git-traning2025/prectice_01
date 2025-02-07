@@ -16,10 +16,10 @@ jobs:
     - name: configure
       run: gcc -o appl *.c
 
-
-
   test:
+  
       runs-on: ubuntu-letest
+      needs: build
       
       steps:
       - uses: actions/checkout@v4
