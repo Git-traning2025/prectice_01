@@ -14,6 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: configure
-      run: gcc -o outputfile/appl *.c
+      run: gcc -o appl *.c
     - name: Run tests
-      run: ./outputfile/appl
+      run: ./appl
